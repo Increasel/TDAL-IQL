@@ -1,0 +1,120 @@
+{
+  "version": "auv-sixdof-v5",
+  "domain": "source",
+  "shift": "ads",
+  "intensity": "moderate",
+  "physics": {
+    "mass_kg": 100.0,
+    "inertia_cg_kg_m2": [
+      8.0,
+      12.0,
+      15.0
+    ],
+    "cg_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cb_m": [
+      0.0,
+      0.0,
+      -0.05
+    ],
+    "water_density_kg_m3": 1025.0,
+    "displaced_volume_m3": 0.0975609756097561,
+    "gravity_m_s2": 9.81,
+    "added_mass": [
+      20.0,
+      22.0,
+      24.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "damping_linear": [
+      20.0,
+      30.0,
+      40.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "damping_quadratic": [
+      4.0,
+      2.0,
+      2.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "tau_max": [
+      200.0,
+      200.0,
+      250.0,
+      10.0,
+      10.0,
+      10.0
+    ],
+    "dt_s": 1.0,
+    "integration_substeps": 10,
+    "numerical_velocity_limit": 100.0
+  },
+  "task": {
+    "workspace_m": [
+      1000.0,
+      1000.0,
+      1000.0
+    ],
+    "scene": "paper_scale",
+    "num_targets": 5,
+    "num_obstacles": 3,
+    "vehicle_radius_m": 5.5,
+    "target_radius_m": 25.0,
+    "obstacle_radius_m": [
+      22.5,
+      27.5
+    ],
+    "obstacle_detection_range_m": 50.0,
+    "max_episode_steps": 1000,
+    "collision_terminates": true,
+    "boundary_terminates": true,
+    "visit_rule": "ordered",
+    "target_order": "provided",
+    "bathymetry_path": null
+  },
+  "current": {
+    "kind": "uniform",
+    "vector_ned_m_s": [
+      1.2,
+      -0.5,
+      -1.8
+    ],
+    "shear_rate_s_inv": 0.002,
+    "shear_reference_depth_m": 500.0,
+    "temporal_amplitude_m_s": [
+      0.3,
+      0.1,
+      0.2
+    ],
+    "temporal_period_s": 120.0,
+    "grid_path": null
+  },
+  "reward": {
+    "alpha_dis": 0.02,
+    "alpha_arr": 20.0,
+    "alpha_tim": 0.01,
+    "alpha_obs": 20.0,
+    "alpha_reg": 0.05,
+    "unsafe_clearance_m": 10.0,
+    "boundary_exit_cost": 1.0,
+    "overall_scale": 1.15
+  },
+  "observation": {
+    "position_scale_m": 1000.0,
+    "target_scale_m": 100.0,
+    "linear_velocity_scale_m_s": 5.0,
+    "angular_velocity_scale_rad_s": 1.0,
+    "include_bottom_clearance": false,
+    "target_relative_frame": "body"
+  }
+}

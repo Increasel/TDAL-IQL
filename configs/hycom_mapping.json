@@ -1,0 +1,10 @@
+{
+  "format_version": "hycom-ned-mapping-v1",
+  "workspace_m": [1000.0, 1000.0, 1000.0],
+  "velocity_scale": 1.0,
+  "time_span_s": null,
+  "sampling": {
+    "spatial_boundary": "clamp",
+    "time_boundary": "clamp"
+  }
+}
